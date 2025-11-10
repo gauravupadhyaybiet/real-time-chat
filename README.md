@@ -51,3 +51,17 @@ Use two accounts (e.g. `alice/alice123` and `bob/bob123`) in two simulators/devi
 - `message:read` `{ from, messageIds }`
 - `presence:update` `{ userId, online }`
 
+same host.
+- Login with seeded users: `alice/alice123`, `bob/bob123`, `charlie/charlie123`.
+- Typing indicator triggers when you type; stops after 800ms idle.
+- Ticks: ✓ (sent), ✓✓ blue (delivered), ✓✓ green (read).
+
+
+### Web/Windows Tips
+- If web shows MIME issue, run `npm run web` or `EXPO_USE_METRO_FOR_WEB=0 npx expo start --web -c`.
+- Android emulator: set `BASE_URL='http://10.0.2.2:4000'`.
+- If install fails, remove node_modules/locks then `npx expo install`.
+
+- Register screen now supports optional Avatar URL.
+- Typing indicator auto-hides after 2s if no stop signal.
+- Duplicate messages fixed via optimistic reconciliation.
